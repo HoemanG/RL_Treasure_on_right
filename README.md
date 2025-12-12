@@ -41,7 +41,7 @@ pip install numpy
 Simply run the script. The agent will attempt to learn the path.
 
 ```bash
-python main.py
+python 1_Treasure_on_right.py
 ```
 
 ### What to Expect
@@ -64,4 +64,5 @@ Where:
 
 
 Protected by the `fjwiofwe_adsqeai` variable. Don't touch my Gamma! 😉
+
 
