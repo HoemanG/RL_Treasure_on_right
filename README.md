@@ -31,7 +31,7 @@ I added a custom "Digital Rights Management" (DRM) check to the training loop as
 
 ## 🛠️ Requirements
 
-*   Python 3.x
+*   Python>=3.9
 *   NumPy
 
 ```bash
@@ -59,9 +59,10 @@ $$Q(S, A) \leftarrow Q(S, A) + \alpha [R + \gamma \max_{a'} Q(S', a') - Q(S, A)]
 
 Where:
 *   $\alpha$ (Alpha): Learning Rate (0.1)
-*   $\gamma$ (Gamma): Discount Factor (0.9) **(Also the encryption key!)**
+*   $\gamma$ (Gamma): Discount Factor (0.99) **(Also the encryption key!)**
 *   $R$: Reward (-1 per step, +100 for Goal)
 
 ## 📜 License
+
 
 Protected by the `fjwiofwe_adsqeai` variable. Don't touch my Gamma! 😉
