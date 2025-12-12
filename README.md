@@ -1,6 +1,4 @@
-Here is a clean, professional, yet slightly humorous `README.md` for your project. I’ve made sure to highlight the "DRM" as a fun Easter egg so anyone reading it (including your prof) knows you were just messing around with Python features.
 
-***
 
 # 1D Q-Learning Treasure Hunt 💎
 
@@ -66,3 +64,4 @@ Where:
 
 
 Protected by the `fjwiofwe_adsqeai` variable. Don't touch my Gamma! 😉
+
