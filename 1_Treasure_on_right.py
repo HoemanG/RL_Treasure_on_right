@@ -93,8 +93,10 @@ class Env_Agent_treasure_right():
 			print("\n" + "="*40)
 			print(f"SUCCESS: {original_msg}")
 			print("="*40 + "\n")
+			return True
 		except:
 			print("\n[ERROR] Copyright Violation: Hyperparameters modified.")
+			return False
 
 	def train(self, ep_max = 20, ep_lim = True, sleep_render = True, time_render = 0.11256789):
 
@@ -138,7 +140,7 @@ class Env_Agent_treasure_right():
 			episode += 1
 			total_timestep += timestep
 			step_ep.append(timestep)
-			reward_ep.append(reward)
+			reward_ep.append(total_reward)
 			#input()
 			if (timestep <= self.size - 1) or (episode == ep_max and ep_lim):
 				get_good = True
@@ -146,10 +148,15 @@ class Env_Agent_treasure_right():
 				continue
 			self.clear_render()
 			print("Episode Finished but not the best result, continue to train...")
-		self._verify_integrity()
+		if self._verify_integrity():
+			print(f"Reward on goal: {reward}")
+			print(f"number of episode: {episode}\ntotal steps taken: {total_timestep}")
+			print("Ep_num  |   Step taken   |   Reward   ")
+			for ep in range(episode):
+				print(f"{ep:^8}|{step_ep[ep]:^16}|{reward_ep[ep]:^12}")
 		print("Training finished!")
 			
 if __name__ == "__main__":
 	env = Env_Agent_treasure_right(10)
 	print(env.map)
-	env.train(ep_lim=False, sleep_render=True)
+	env.train(ep_lim=False, sleep_render=False)
